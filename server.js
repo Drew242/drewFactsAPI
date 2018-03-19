@@ -2,7 +2,7 @@ var configFile = require('./config');
 var Fact = require('./models/fact'); // model needed for Fact API
 
 var mongoose = require('mongoose');
-mongoose.connect(config.mongoConnect); // connect to MongoDB
+mongoose.connect(configFile.mongoDbConnection); // connect to MongoDB
 
 // call the packages we need
 var express = require('express');
