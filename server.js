@@ -59,7 +59,7 @@ router.route('/facts')
         var fact = new Fact();
         fact.description = req.body.description;
 
-        console.log(fact, fact.description, req.body.description);
+        console.log(fact);
         // save the fact and check for errors
         fact.save(function (err) {
             if (err)
@@ -75,7 +75,6 @@ router.route('/facts')
         Fact.find(function (err, facts) {
             if (err)
                 res.send(err);
-            console.log(res.json(facts));
             res.json(facts);
         });
     });
